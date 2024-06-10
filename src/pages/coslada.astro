@@ -1,0 +1,123 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Electricistas Coslada | IMELEC ELÉCTRICIDAD MADRID',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contacto',
+        href: 'https://imelec.es/contact',
+        target: '_blank',
+        icon: 'tabler:phone',
+      },
+      
+    ]}
+    image={{ src: '~/assets/images/banner.webp', alt: 'Logo electricistas Madrid Imelec' }}
+  >
+    <Fragment slot="title">
+      <div class="flex flex-col gap-6">
+        Imelec Electricidad
+        <span class="text-[#05f] dark:text-white highlight"> Electricistas en Coslada</span>
+      </div>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Electricistas en Coslada</span> especializados en servicios eléctricos en Coslada. Desde hace más de 15 años, brindamos a nuestros clientes soluciones efectivas y seguras, cubriendo todo desde instalaciones eléctricas hasta mantenimientos y reparaciones. </span
+      >
+    </Fragment>
+  </Hero>
+
+  <Features
+    id="features"
+    tagline="Servicios"
+    title="Necesitas una empresa de electricidad en Coslada"
+    subtitle=" En Imelec electricistas Madrid, estamos comprometidos con la satisfacción del cliente y una excelente relación calidad-precio. Confía en nosotros para mantener tu entorno energizado y seguro."
+    items={[
+      {
+        title: 'Instalaciones eléctricas en Coslada',
+        description:
+          'En Imelec Electricidad Madrid, Nuestro enfoque personalizado garantiza que cada instalación se adapte a tus requisitos específicos y cumpla con los estándares más altos de calidad. Desde el diseño inicial hasta la puesta en marcha, nos aseguramos de que cada detalle esté cuidadosamente planificado y ejecutado.',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Averías Eléctricas en Coslada',
+        description:
+          'Ya sea un cortocircuito, un cableado defectuoso o cualquier otro problema eléctrico, nuestro equipo está listo para realizar reparaciones profesionales con los más altos estándares de calidad y seguridad.',
+        icon: 'tabler:bulb-off',
+      },     
+      {
+        title: 'Puntos de recarga para vehículos eléctricos',
+        description:
+          'Cada instalación de puntos de recarga requiere un enfoque cuidadoso y personalizado. Evaluamos la ubicación, calculamos la demanda energética esperada y seleccionamos los equipos que mejor se adapten a las necesidades del usuario final, garantizando siempre la máxima eficiencia y funcionalidad.',
+        icon: 'tabler:solar-panel-2',
+      },
+      {
+        title: 'Comunidades de Vecinos Coslada',
+        description:
+          'Adaptamos y rehabilitamos la instalación eléctrica de cualquier tipo de edificio, para cumplir con los requisitos establecidos por el Reglamento electrotécnico de Baja tensión.Subsanación de incumplimientos de la inspección eléctrica obligatoria para el cumplimiento de la legislación vigente.',
+        icon: 'tabler:home-bolt',
+      },
+    ]}
+  />
+
+  <ContactUs
+  id="form"
+  title="Drop us a message today!"
+  subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+  inputs={[
+    {
+      type: 'text',
+      name: 'name',
+      label: 'Name',
+    },
+    {
+      type: 'email',
+      name: 'email',
+      label: 'Email',
+    },
+  ]}
+  textarea={{
+    label: 'Message',
+  }}
+  disclaimer={{
+    label:
+      'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+  }}
+  description="Our support team typically responds within 24 business hours."
+/>
+
+<Features2
+title="We are here to help!"
+items={[
+  {
+    title: 'Telefono',
+    description: '+34 691 50 23 61 ',
+    icon: 'tabler:headset',
+  },
+  {
+    title: 'Email',
+    description: 'info@imelec.es',
+    icon: 'tabler:mail',
+  },
+  {
+    title: 'Dirección',
+    description: 'Ctra de Loeches 55 , 28850, Torrejón de Ardoz, Madrid',
+    icon: 'tabler:map-pin',
+  },
+]}
+/>
+
+</Layout>

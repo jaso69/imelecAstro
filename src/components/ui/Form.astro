@@ -1,0 +1,82 @@
+---
+import type { Form as Props } from '~/types';
+import Button from '~/components/ui/Button.astro';
+
+const { textarea, button = 'Enviar', description = '' } = Astro.props;
+---
+
+<form action="mailto:info@imelec.es" method="POST" enctype="text/plain">
+  {
+            <div class="mb-6">
+            
+                <label for='name' class="block text-sm font-medium">
+                  Nombre
+                </label>
+              
+              <input
+                type='text'
+                name='nombre'
+                id='name'
+                autocomplete='false'
+                placeholder='Juan Martinez'
+                class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+              />
+            </div>
+      
+  }
+
+  {
+    textarea && (
+      <div>
+        <label for="textarea" class="block text-sm font-medium">
+          Mensaje
+        </label>
+        <textarea
+          id="textarea"
+          name={textarea.name ? textarea.name : 'message'}
+          rows={textarea.rows ? textarea.rows : 4}
+          placeholder='Motivo de contacto, no olvides dejarnos un teléfono o email, para responderte'
+          class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+        />
+      </div>
+    )
+  }
+
+  {
+    // disclaimer && (
+    //   <div class="mt-3 flex items-start">
+    //     <div class="flex mt-0.5">
+    //       <input
+    //         id="disclaimer"
+    //         name="disclaimer"
+    //         type="checkbox"
+    //         class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+    //       />
+    //     </div>
+    //     <div class="ml-3">
+    //       <label for="disclaimer" class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
+    //         {disclaimer.label}
+    //       </label>
+    //     </div>
+    //   </div>
+    // )
+  }
+
+  {
+    button && (
+      <div class="mt-10 grid">
+        <Button variant="primary" type="submit">
+          {button}
+        </Button>
+      </div>
+    )
+  }
+
+  {
+    description && (
+      <div class="mt-3 text-center">
+        <p class="text-sm text-gray-600 dark:text-gray-400">Responderemos lo antes posible</p>
+      </div>
+    )
+  }
+</form>

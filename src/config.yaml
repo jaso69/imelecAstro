@@ -1,0 +1,67 @@
+site:
+  name: Imelec Electricidad
+  site: 'https://imelec.es'
+  base: '/'
+  trailingSlash: false
+
+  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M-5
+
+# Default SEO metadata
+metadata:
+  title:
+    default: Imelec Electricidad Madrid
+    template: '%s — AstroWind'
+  description: "\U0001F680 Electricistas en Madrid especializados en servicios eléctricos en Madrid. Desde hace más de 15 años, brindamos a nuestros clientes soluciones efectivas y seguras, cubriendo todo desde instalaciones eléctricas hasta mantenimientos y reparaciones. "
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Imelec Electricidad Madrid
+    images:
+      - url: '~/assets/images/default.png'
+        width: 1200
+        height: 628
+    type: website
+  twitter:
+    handle: '@onwidget'
+    site: '@onwidget'
+    cardType: summary_large_image
+
+i18n:
+  language: es
+  textDirection: ltr
+
+apps:
+  blog:
+    postsPerPage: 0
+    post:
+      isEnabled: false
+      permalink: /blog/:year/:month/:day/:slug
+      robots:
+        index: false
+    isEnabled: false
+    list:
+      isEnabled: false
+      pathname: /blog
+      robots:
+        index: false
+    category:
+      isEnabled: false
+      pathname: /blog/category
+      robots:
+        index: false
+    tag:
+      isEnabled: false
+      pathname: /blog/tag
+      robots:
+        index: false
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: G-V6VXE9T9KV
+      partytown: false
+    
+
+ui:
+  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

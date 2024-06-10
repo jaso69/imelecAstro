@@ -1,0 +1,382 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+//import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+//import FAQs from '~/components/widgets/FAQs.astro';
+//import Stats from '~/components/widgets/Stats.astro';
+//import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Electricistas Madrid | IMELEC ELÉCTRICIDAD MADRID',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contacto',
+        href: 'https://imelec.es/contact',
+        target: '_blank',
+        icon: 'tabler:phone',
+      },
+      { text: 'Servicios', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/banner.webp', alt: 'Logo electricistas Madrid Imelec' }}
+  >
+    <Fragment slot="title">
+      <div class="flex flex-col gap-6">
+        Imelec Electricidad
+        <span class="text-[#05f] dark:text-white highlight"> Empresa de Electricidad en Madrid</span>
+      </div>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Electricistas en Madrid</span> especializados en servicios eléctricos en Madrid. Desde hace más de 15 años, brindamos a nuestros clientes soluciones efectivas y seguras, cubriendo todo desde instalaciones eléctricas hasta mantenimientos y reparaciones. Contamos con un equipo de electricistas certificados y experimentados que están disponibles para asegurar que tu hogar o negocio siempre estén funcionando sin interrupciones. Priorizamos la calidad y la seguridad en cada proyecto, utilizando los materiales más innovadores y de la mejor calidad del mercado. </span
+      >
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Servicios"
+    title="Necesitas una empresa de electricidad en Madrid"
+    subtitle=" En Imelec electricistas Madrid, estamos comprometidos con la satisfacción del cliente y una excelente relación calidad-precio. Confía en nosotros para mantener tu entorno energizado y seguro."
+    items={[
+      {
+        title: 'Instalaciones eléctricas en Madrid',
+        description:
+          'En Imelec Electricidad Madrid, entendemos que cada proyecto es único. Nuestro enfoque personalizado garantiza que cada instalación se adapte a tus requisitos específicos y cumpla con los estándares más altos de calidad. Desde el diseño inicial hasta la puesta en marcha, nos aseguramos de que cada detalle esté cuidadosamente planificado y ejecutado.',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Averías Eléctricas en Madrid',
+        description:
+          'Ya sea un cortocircuito, un cableado defectuoso o cualquier otro problema eléctrico, nuestro equipo está listo para realizar reparaciones profesionales con los más altos estándares de calidad y seguridad.',
+        icon: 'tabler:bulb-off',
+      },
+      {
+        title: 'Cableado Estructurado',
+        description:
+          'Instalamos la infraestructura de red. Ofrecemos servicios de actualización y ampliación para adaptarse a las crecientes demandas de la empresa,',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Eficiencia Energética',
+        description:
+          'Nos enfocamos en maximizar la eficiencia energética. Nuestros sistemas están diseñados para aprovechar al máximo la luz solar disponible y optimizar el rendimiento a lo largo del tiempo.',
+        icon: 'tabler:solar-panel-2',
+      },
+      {
+        title: 'Instalaciones Industriales',
+        description:
+          "En Instalaciones Industriales Imelec, entendemos la importancia de contar con infraestructuras eficientes y seguras en el sector industrial. Con más de 20 años de experiencia, nos especializamos en el diseño, implementación y mantenimiento de sistemas industriales.",
+        icon: 'tabler:building-factory-2',
+      },
+      {
+        title: 'Comunidades de Vecinos Madrid',
+        description:
+          'Adaptamos y rehabilitamos la instalación eléctrica de cualquier tipo de edificio, para cumplir con los requisitos establecidos por el Reglamento electrotécnico de Baja tensión.Subsanación de incumplimientos de la inspección eléctrica obligatoria para el cumplimiento de la legislación vigente.',
+        icon: 'tabler:home-bolt',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id='contenido'
+    isReversed
+    tagline="Imelec Electricidad Madrid"
+    title="Servicios eléctricos en Madrid"
+    items={[
+      {
+        title: 'Instalaciones Residenciales',
+        description:
+          'Desde la planificación hasta la ejecución, estamos comprometidos a proporcionar soluciones eléctricas eficientes y seguras para su hogar. Nos aseguramos de que cada instalación cumpla con los estándares más altos de calidad y seguridad.',
+      },
+      {
+        title: 'Instalaciones Comerciales',
+        description:
+          'Entendemos la importancia de un sistema eléctrico confiable en entornos comerciales. Nuestro equipo trabaja en estrecha colaboración con los clientes para diseñar e implementar soluciones adaptadas a las necesidades específicas de su negocio.',
+      },
+      {
+        title: 'Cableado Estructurado',
+        description:
+          'Instalamos la infraestructura de red. Ofrecemos servicios de actualización y ampliación para adaptarse a las crecientes demandas de la empresa.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/electricidad1.webp',
+      alt: 'electricistas madrid iluminación',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Instalaciones eléctricas en Madrid</h3>
+      Una gran variedad de soluciones esenciales para hogares, empresas e instituciones, garantizando un suministro eléctrico seguro, confiable y conforme a todas las regulaciones locales y nacionales vigentes
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Instalaciones de Iluminación',
+        description: `Desde el diseño e instalación de sistemas de iluminación eficientes hasta la actualización de sistemas antiguos a tecnologías más sostenibles, como LED.`,
+      },
+      {
+        title: 'Puntos de recarga para vehículos eléctricos',
+        description:
+          'Cada instalación de puntos de recarga requiere un enfoque cuidadoso y personalizado. Evaluamos la ubicación, calculamos la demanda energética esperada y seleccionamos los equipos que mejor se adapten a las necesidades del usuario final, garantizando siempre la máxima eficiencia y funcionalidad.',
+      },
+      {
+        title: 'Automatización y Control del Sistema Eléctrico',
+        description:
+          "Implementación de soluciones de domótica que permiten optimizar el uso y control de los sistemas eléctricos a través de la automatización.",
+      },
+      {
+        title: 'Instalación de Sistemas de Energías Renovables',
+        description:
+          'Integración de tecnologías como paneles solares, contribuyendo a la sostenibilidad y reduciendo la dependencia de las fuentes de energía tradicionales.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/electricidad2.webp',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content">Ofrecemos un amplio espectro de servicios.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Instalación y Diseño Eléctrico',
+        description:
+          'Este servicio incluye la planificación, el diseño y la instalación de sistemas eléctricos completos para nuevas construcciones o renovaciones. Se encargan de la implementación de la infraestructura necesaria para el correcto funcionamiento del suministro eléctrico, asegurando que todo se realice conforme a las normativas vigentes.',
+      },
+      {
+        title: 'Mantenimiento Eléctrico Preventivo',
+        description:
+          'Para evitar fallos y asegurar un funcionamiento óptimo de los sistemas eléctricos, se ofrece un servicio de mantenimiento preventivo que incluye inspecciones regulares, pruebas y la sustitución de componentes desgastados antes de que puedan causar interrupciones del servicio.',
+      },
+      {
+        title: 'Reparaciones de Emergencia',
+        description:
+          'Servicios de emergencia, respondiendo rápidamente a cualquier tipo de avería eléctrica para minimizar el tiempo de inactividad y los posibles inconvenientes que esto pueda ocasionar.',
+      },
+      {
+        title: 'Auditorías y Certificaciones Eléctricas',
+        description: `Auditorías eléctricas completas para evaluar la eficiencia del sistema eléctrico existente y sugerir mejoras. Además, proporcionan las certificaciones eléctricas necesarias para cumplir con la legislación vigente.`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/electricidad3.webp',
+      alt: 'Diseño e instalación para la industria',
+    }}
+  >
+    <Fragment slot="content">Diseño e instalación para la industria</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id='proceso'
+    title="La realización de instalaciones eléctricas en IMELEC Madrid se desarrolla a través de un proceso meticuloso y bien estructurado:"
+    items={[
+      {
+        title: 'Paso 1: <span class="font-medium">Evaluación y Planificación</span>',
+        description:
+          "Antes de iniciar cualquier proyecto, se realiza una evaluación exhaustiva de las necesidades del cliente y del entorno donde se llevará a cabo la instalación. Nuestro equipo de expertos revisa los planos del edificio, realiza inspecciones en el sitio y se reúne con el cliente para entender completamente sus requisitos y expectativas.",
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Paso 2: <span class="font-medium">Instalación</em>',
+        description:
+          "Durante esta fase, seguimos estrictamente todas las normativas y códigos de seguridad pertinentes para garantizar que la instalación no solo sea eficiente sino también segura para todos los usuarios. Utilizamos herramientas avanzadas y técnicas probadas para minimizar las interrupciones y asegurar una instalación limpia y ordenada.",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Paso 3: <span class="font-medium">Pruebas y Verificación</span>',
+        description:
+          'Una vez completada la instalación, el sistema eléctrico se somete a una serie de pruebas rigurosas para asegurar su funcionamiento correcto y seguro. Esto incluye pruebas de resistencia eléctrica, verificación de circuitos, y aseguramiento de la correcta configuración del sistema de acuerdo a las especificaciones técnicas.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Entrega y Formación',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/electricidad4.webp',
+      alt: 'instalaciones eléctricas en Madrid',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id='confianza'
+    title="Trabajar con nosotros"
+    subtitle="Aquí se detallan algunos de los motivos clave por los cuales elegir a IMELEC Electricidad Madrid es una decisión acertada"
+    tagline="Confianza"
+    items={[
+      {
+        title: 'Experiencia y Profesionalismo',
+        description: "IMELEC Eléctricidad Madrid cuenta con años de experiencia en el sector eléctrico, realizando proyectos de variada complejidad con un enfoque impecable en la calidad y la profesionalidad. ",
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Cumplimiento de Normativas',
+        description:
+          "La seguridad es un pilar fundamental en IMELEC. La empresa garantiza que todas las instalaciones y mantenimientos se realizan de acuerdo con las normativas locales e internacionales más estrictas.",
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Soluciones Personalizadas',
+        description:
+          'Cada cliente es único y sus necesidades también. IMELEC se destaca por ofrecer soluciones personalizadas adaptadas a las especificaciones de cada proyecto. ',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Innovación Tecnológica',
+        description:
+          "IMELEC invierte en tecnología de punta y mantiene una constante actualización sobre las tendencias y avances en el mundo de la electricidad.",
+        icon: 'tabler:home-link',
+      },
+      {
+        title: 'Compromiso con el Servicio al Cliente',
+        description:
+          'La satisfacción del cliente es primordial para IMELEC. El servicio al cliente no termina con la instalación; la empresa proporciona un seguimiento exhaustivo y apoyo continuo para asegurar que los sistemas eléctricos funcionen de manera óptima y eficiente.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Relación Calidad-Precio',
+        description: 'IMELEC se esfuerza por ofrecer un excelente valor a sus clientes, combinando precios competitivos con servicios de alta calidad. Esta relación costo-beneficio es fundamental para establecer y mantener relaciones a largo plazo con sus clientes.',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <!-- <BlogLatestPosts
+    title="Find out more content in our Blog"
+    information={`
+                `}
+  /> -->
+
+  <!-- FAQs Widget ******************* -->
+
+  <!-- <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Why AstroWind?',
+        description:
+          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+      },
+      {
+        title: 'What do I need to start?',
+        description:
+          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+      },
+      {
+        title: 'How to install the Astro + Tailwind CSS template?',
+        description:
+          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+      },
+      {
+        title: "What's something that you don't understand?",
+        description:
+          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+      },
+      {
+        title: 'What is something that you would like to try again?',
+        description:
+          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+      },
+      {
+        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        description:
+          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+      },
+    ]}
+  /> -->
+
+  <!-- Stats Widget ****************** -->
+
+  <!-- <Stats
+    stats={[
+      { title: 'OBRAS', amount: '1256' },
+      { title: 'Stars', amount: '24.8K' },
+      { title: 'Forks', amount: '10.3K' },
+      { title: 'Users', amount: '48.4K' },
+    ]}
+  /> -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <!-- <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get template',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
+      waste more time! :P
+    </Fragment>
+  </CallToAction> -->
+</Layout>

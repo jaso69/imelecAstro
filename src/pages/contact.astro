@@ -1,0 +1,80 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contacto | IMELEC ELÉCTRICIDAD MADRID',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+<!-- 
+  <HeroText tagline="" title="Contacto" /> -->
+
+  <ContactUs
+    id="form"
+    title="Drop us a message today!"
+    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+    }}
+    disclaimer={{
+      label:
+        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+    }}
+    description="Our support team typically responds within 24 business hours."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="We are here to help!"
+    items={[
+      {
+        title: 'Telefono',
+        description: '+34 691 50 23 61 ',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: 'info@imelec.es',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Dirección',
+        description: 'Ctra de Loeches 55 , 28850, Torrejón de Ardoz, Madrid',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Soporte',
+        description: `No importa cuál sea su pregunta o inquietud, estamos aquí para proporcionarle el soporte técnico necesario. Nos comprometemos a trabajar diligentemente para garantizar su satisfacción y mantener sus sistemas eléctricos funcionando sin problemas.`,
+      },
+      {
+        title: 'Instalaciones',
+        description:
+          'Nuestro equipo de profesionales altamente calificados se especializa en ofrecer servicios de instalación eléctrica de primera calidad. Desde pequeñas reparaciones hasta proyectos de instalación de gran envergadura, estamos aquí para cubrir todas sus necesidades eléctricas.',
+      },
+      {
+        title: 'Electricistas Madrid',
+        description:
+          'No te arriesgues con trabajos eléctricos improvisados. Confía en los expertos de Imelec Electricidad Madrid para garantizar que tus sistemas eléctricos funcionen de manera segura y confiable. ¡Contáctanos hoy mismo y deja que nuestros electricistas te brinden la ayuda que necesitas!',
+      },
+      
+    ]}
+  />
+</Layout>
